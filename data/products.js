@@ -235,7 +235,7 @@ window.products = [
     name: "Turbo Yıkama",
     category: "Yıkama ve Kurutma Sistemleri",
     categorySlug: "yikama-ve-kurutma-sistemleri",
-    image: "assets/images/Makineler/YikamaveKurutmaSistemleri/TurboYikama/TurboYikama.webp",
+    image: "assets/images/Makineler/YikamaveKurutmaSistemleri/turboyikama/turboyikama.webp",
     shortDescription: "Yoğun türbülans ile inatçı kirleri temizleyen yüksek performanslı yıkama sistemi.",
     fullDescription: "Turbo yıkama makineleri, yüksek devirli rotor ve türbülans etkisi ile plastik yüzeyindeki yağ, yapışkan ve kirleri kısa sürede temizler. Yıkama hattında maksimum temizlik sağlar.",
     features: [
