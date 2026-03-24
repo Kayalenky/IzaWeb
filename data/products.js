@@ -151,7 +151,7 @@ window.products = [
     name: "Dikey Sıkma",
     category: "Yıkama ve Kurutma Sistemleri",
     categorySlug: "yikama-ve-kurutma-sistemleri",
-    image: "assets/images/Makineler/YikamaveKurutmaSistemleri/DikeySikma/dikeysikma.webp",
+    image: "assets/images/Makineler/YikamaveKurutmaSistemleri/dikeysikma/dikeysikma.webp",
     shortDescription: "Yıkanmış plastiklerin nemini alarak hacmini küçülten dikey sıkma sistemi.",
     fullDescription: "Dikey sıkma makineleri, plastik film ve hafif malzemelerin yıkama sonrası nemini uzaklaştırmak ve hacmini küçültmek için geliştirilmiştir. Dikey konumda çalışan vida sistemi sayesinde malzeme yerçekimi ile düzenli ilerler ve yüksek verimlilikle sıkıştırılır.",
     features: [
