@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Ürün Detayı | IZA Makina</title>
+  <link rel="stylesheet" href="../assets/css/style.css" />
+</head>
+<body>
+
+<header class="header">
+  <div class="container">
+    <a href="../index.html" class="logo">
+      <img src="../assets/images/izaLogo.png" alt="IZA Logo">
+    </a>
+
+    <nav class="nav">
+      <a href="../index.html">Ana Sayfa</a>
+      <a href="../index.html#kategoriler">Makinalar</a>
+      <a href="../pages/about.html">Hakkımızda</a>
+      <a href="../pages/contact.html">İletişim</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+
+<section class="page-hero">
+  <div class="container">
+    <h1 id="product-page-title">Ürün</h1>
+    <p id="product-page-subtitle"></p>
+  </div>
+</section>
+
+<section class="product-detail-section">
+  <div class="container">
+
+    <div class="product-detail-top">
+
+      <div class="product-detail-image">
+        <img id="product-image" src="" alt="">
+      </div>
+
+      <div class="product-detail-summary">
+        <span id="product-category" class="section-label"></span>
+        <h2 id="product-name"></h2>
+        <p id="product-short-description"></p>
+
+        <div class="product-detail-actions">
+          <a id="product-category-link" class="btn btn-secondary" href="#">Kategoriye Dön</a>
+          <a href="../pages/contact.html" class="btn btn-primary">Teklif Al</a>
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+</section>
+
+<section class="product-content-section">
+  <div class="container">
+
+    <div class="product-content-grid">
+
+      <div class="product-content-card">
+        <h3>Açıklama</h3>
+        <p id="product-full-description"></p>
+      </div>
+
+      <div class="product-content-card" id="features-card">
+        <h3>Öne Çıkan Özellikler</h3>
+        <ul id="product-features" class="detail-list"></ul>
+      </div>
+
+      <div class="product-content-card" id="usage-card">
+        <h3>Kullanım Alanları</h3>
+        <ul id="product-usage-areas" class="detail-list"></ul>
+      </div>
+
+      <div class="product-content-card" id="specs-card">
+        <h3>Teknik Özellikler</h3>
+        <div id="product-specs" class="specs-list"></div>
+      </div>
+
+    </div>
+
+  </div>
+</section>
+
+<section class="products">
+  <div class="container">
+    <h2>Benzer Ürünler</h2>
+    <div id="similar-products-list" class="product-grid"></div>
+  </div>
+</section>
+
+</main>
+
+<footer class="footer">
+  <div class="container footer-content">
+    <p>© 2026 IZA Makina</p>
+  </div>
+</footer>
+
+<script src="../data/products.js"></script>
+<script src="../assets/js/product.js"></script>
+
+</body>
+</html>
