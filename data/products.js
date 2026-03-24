@@ -172,7 +172,7 @@ window.products = [
     name: "Yatay Sıkma",
     category: "Yıkama ve Kurutma Sistemleri",
     categorySlug: "yikama-ve-kurutma-sistemleri",
-    image: "assets/images/Makineler/YikamaveKurutmaSistemleri/YataySikma/YataySikma.webp",
+    image: "assets/images/Makineler/YikamaveKurutmaSistemleri/yataysikma/yataysikma.webp",
     shortDescription: "Plastik malzemelerin nemini azaltarak yoğunluğunu artıran yatay sıkma sistemi.",
     fullDescription: "Yatay sıkma makinesi, yıkanmış plastik film ve düşük yoğunluklu malzemelerin içerisindeki nemi uzaklaştırarak hacmini azaltır. Yüksek devirli vida sistemi sayesinde malzeme sıkıştırılır ve ekstrüder hattına uygun hale getirilir.",
     features: [
@@ -193,7 +193,7 @@ window.products = [
     name: "Yıkama Havuzu",
     category: "Yıkama ve Kurutma Sistemleri",
     categorySlug: "yikama-ve-kurutma-sistemleri",
-    image: "assets/images/Makineler/YikamaveKurutmaSistemleri/YikamaHavuzu/YikamaHavuzu.webp",
+    image: "assets/images/Makineler/YikamaveKurutmaSistemleri/yikamahavuzu/yikamahavuzu.webp",
     shortDescription: "Plastik yüzeyindeki kir ve yabancı maddeleri ayıran temizleme sistemi.",
     fullDescription: "Yıkama havuzları, plastik geri dönüşüm sürecinde kir, etiket ve yabancı maddeleri ayırarak malzemenin temizlenmesini sağlar. Yüzdürme-çöktürme prensibi ile hafif plastikler yüzeyde kalırken ağır maddeler dibe çöker.",
     features: [
