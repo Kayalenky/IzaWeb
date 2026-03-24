@@ -256,7 +256,7 @@ window.products = [
     name: "Turbo Kurutma",
     category: "Yıkama ve Kurutma Sistemleri",
     categorySlug: "yikama-ve-kurutma-sistemleri",
-    image: "assets/images/Makineler/YikamaveKurutmaSistemleri/TurboKurutma/TurboKurutma.webp",
+    image: "assets/images/Makineler/YikamaveKurutmaSistemleri/turbokurutma/turbokurutma.webp",
     shortDescription: "Yıkanmış plastiklerin nemini hızlı ve verimli şekilde uzaklaştıran sistem.",
     fullDescription: "Turbo kurutma makineleri, yüksek devirli rotor ve hava akışı ile plastik malzemelerin üzerindeki suyu uzaklaştırır. Malzemeyi kuru ve işleme hazır hale getirir.",
     features: [
