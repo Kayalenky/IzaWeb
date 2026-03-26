@@ -10,9 +10,9 @@
 
   <header class="header">
     <div class="container">
-<a href="../index.html" class="logo">
-  <img src="../assets/images/izaLogo.png" alt="IZA Recycling Logo">
-</a>
+      <a href="../index.html" class="logo">
+        <img src="../assets/images/izaLogo.png" alt="IZA Recycling Logo">
+      </a>
 
       <nav class="nav">
         <a href="../index.html">Ana Sayfa</a>
@@ -102,6 +102,29 @@
         </div>
       </div>
     </section>
+
+    <section class="world-map-section">
+      <div class="container">
+        <div class="section-heading section-heading-center">
+          <span class="section-label">Global Ağımız</span>
+          <h2>İhracat Yaptığımız Ülkeler</h2>
+          <p>Harita üzerinde ihracat gerçekleştirdiğimiz ülkeleri inceleyebilirsiniz.</p>
+        </div>
+
+        <div class="world-map-card">
+          <div class="world-map-wrapper">
+            <object
+              id="worldMapObject"
+              type="image/svg+xml"
+              data="../assets/images/WorldMap.svg"
+              aria-label="Dünya Haritası"
+            ></object>
+
+            <div id="map-tooltip" class="map-tooltip"></div>
+          </div>
+        </div>
+      </div>
+    </section>
   </main>
 
   <footer class="footer">
@@ -114,6 +137,79 @@
       </div>
     </div>
   </footer>
+
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+  const mapObject = document.getElementById("worldMapObject");
+  const tooltip = document.getElementById("map-tooltip");
+
+  const exportedCountries = [
+    { id: "ES", name: "İspanya" },
+    { id: "BR", name: "Brezilya" },
+    { id: "TR-1", name: "Türkiye" },
+    { id: "TR-2", name: "Türkiye" },
+    { id: "RU-1", name: "Rusya" },
+    { id: "RU-2", name: "Rusya" },
+    { id: "RU-3", name: "Rusya" },
+    { id: "RU-4", name: "Rusya" },
+    { id: "RU-5", name: "Rusya" },
+    { id: "RU-6", name: "Rusya" },
+    { id: "RU-7", name: "Rusya" },
+    { id: "RU-8", name: "Rusya" },
+    { id: "RU-9", name: "Rusya" },
+    { id: "RU-10", name: "Rusya" },
+    { id: "LB", name: "Lübnan" }
+  ];
+
+  mapObject.addEventListener("load", () => {
+    const svgDoc = mapObject.contentDocument;
+    if (!svgDoc) return;
+
+    const svgRoot = svgDoc.querySelector("svg");
+    if (!svgRoot) return;
+
+    svgRoot.style.width = "100%";
+    svgRoot.style.height = "100%";
+    svgRoot.style.transform = "none";
+    svgRoot.style.transformOrigin = "center center";
+    svgRoot.setAttribute("preserveAspectRatio", "xMidYMid meet");
+
+    const allCountries = svgDoc.querySelectorAll("path");
+
+    allCountries.forEach((country) => {
+      country.style.fill = "#d6d6d6";
+      country.style.stroke = "#ffffff";
+      country.style.strokeWidth = "0.5";
+      country.style.transition = "fill 0.2s ease";
+    });
+
+    exportedCountries.forEach((countryData) => {
+      const country = svgDoc.getElementById(countryData.id);
+      if (!country) return;
+
+      country.style.fill = "#d62828";
+      country.style.cursor = "pointer";
+
+      country.addEventListener("mouseenter", () => {
+        country.style.fill = "#ef4444";
+        tooltip.textContent = countryData.name;
+        tooltip.style.opacity = "1";
+      });
+
+      country.addEventListener("mousemove", (e) => {
+        const objectRect = mapObject.getBoundingClientRect();
+        tooltip.style.left = `${objectRect.left + e.clientX + 12}px`;
+        tooltip.style.top = `${objectRect.top + e.clientY + 12}px`;
+      });
+
+      country.addEventListener("mouseleave", () => {
+        country.style.fill = "#d62828";
+        tooltip.style.opacity = "0";
+      });
+    });
+  });
+});
+</script>
 
 </body>
 </html>

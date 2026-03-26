@@ -67,7 +67,7 @@ img {
 }
 
 .logo img {
-  height: 52px;
+  height: 170px;
   width: auto;
 }
 
@@ -167,11 +167,20 @@ img {
   margin-bottom: 32px;
 }
 
-.hero-actions,
+.hero-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 14px;
+}
+
 .contact-actions {
   display: flex;
   flex-wrap: wrap;
   gap: 14px;
+}
+
+.contact-actions-centered {
+  justify-content: center;
 }
 
 .btn {
@@ -250,6 +259,10 @@ img {
 .section-heading {
   max-width: 780px;
   margin-bottom: 42px;
+  background: transparent;
+  border: none;
+  box-shadow: none;
+  padding: 0;
 }
 
 .section-heading h2 {
@@ -258,11 +271,46 @@ img {
   letter-spacing: -1px;
   color: var(--primary);
   margin-bottom: 14px;
+  background: transparent;
+  border: none;
+  box-shadow: none;
 }
 
 .section-heading p {
   color: var(--text-soft);
   font-size: 16px;
+  background: transparent;
+  border: none;
+  box-shadow: none;
+}
+
+.section-heading-left {
+  text-align: left;
+}
+
+.section-heading-center {
+  text-align: center;
+  max-width: 700px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.section-heading-left .section-label,
+.section-heading-center .section-label {
+  background: #eaf6ee;
+  color: var(--accent-dark);
+  border: 1px solid #cfe9d7;
+}
+
+.section-heading-center h2 {
+  line-height: 1.2;
+  margin-bottom: 16px;
+}
+
+.section-heading-center p {
+  line-height: 1.7;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 /* CATEGORY CARDS */
@@ -513,13 +561,20 @@ img {
 }
 
 .about-preview .section-heading h2,
-.about-preview .section-heading p,
-.about-preview .section-label {
+.about-preview .section-heading p {
   color: #ffffff;
 }
 
 .about-preview .section-heading p {
   color: #d7e0eb;
+}
+
+.about-preview .section-label,
+.contact-preview .section-label,
+.mobile-app-section .section-label {
+  background: rgba(255,255,255,0.12) !important;
+  color: #ffffff !important;
+  border: 1px solid rgba(255,255,255,0.2) !important;
 }
 
 .about-features {
@@ -613,6 +668,16 @@ img {
 }
 
 .contact-preview .section-heading p {
+  color: #d8dfeb;
+}
+
+.contact-preview .section-heading-center h2,
+.contact-preview .section-heading-center p,
+.contact-preview .section-heading-center .section-label {
+  color: #ffffff;
+}
+
+.contact-preview .section-heading-center p {
   color: #d8dfeb;
 }
 
@@ -1174,4 +1239,123 @@ img {
     flex: 0 0 100%;
     max-width: 100%;
   }
+}
+
+.mobile-app-section {
+  padding: 72px 0;
+  background: linear-gradient(135deg, var(--primary), #182958);
+}
+
+.mobile-app-box {
+  padding: 32px 36px;
+  border-radius: 20px;
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(6px);
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.mobile-app-text {
+  text-align: center;
+}
+
+.mobile-app-text h2 {
+  color: #ffffff;
+  font-size: 32px;
+  margin-bottom: 10px;
+}
+
+.mobile-app-text p {
+  color: #cfd6e3;
+  margin-bottom: 20px;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.section-label {
+  display: inline-block;
+  font-size: 13px;
+  padding: 6px 12px;
+  border-radius: 999px;
+  background: rgba(255,255,255,0.08);
+  color: #fff;
+  margin-bottom: 12px;
+}
+
+.store-buttons {
+  display: flex;
+  gap: 14px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.store-buttons img {
+  height: 50px;
+  width: auto;
+  transition: transform 0.2s ease;
+}
+
+.store-buttons img:hover {
+  transform: scale(1.05);
+}
+
+.whatsapp-btn {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  width: 60px;
+  height: 60px;
+  z-index: 999;
+}
+
+.whatsapp-btn img {
+  width: 100%;
+  height: 100%;
+}
+
+.world-map-section {
+  padding: 96px 0;
+  background: #f7faf8;
+}
+
+.world-map-card {
+  background: linear-gradient(180deg, #ffffff 0%, #f4f8f5 100%);
+  border: 1px solid var(--border);
+  border-radius: 28px;
+  box-shadow: var(--shadow);
+  padding: 10px;
+}
+
+.world-map-wrapper {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 2000 / 857;
+  border-radius: 20px;
+  overflow: hidden;
+  background: #eef3ef;
+}
+
+.world-map-wrapper object {
+  display: block;
+  width: 100%;
+  height: 100%;
+  border: 0;
+}
+
+.map-tooltip {
+  position: fixed;
+  opacity: 0;
+  pointer-events: none;
+  z-index: 9999;
+  background: rgba(11, 22, 53, 0.94);
+  color: #ffffff;
+  padding: 8px 12px;
+  border-radius: 10px;
+  font-size: 13px;
+  font-weight: 700;
+  white-space: nowrap;
+  box-shadow: 0 10px 24px rgba(11, 22, 53, 0.18);
+  transition: opacity 0.2s ease;
 }
