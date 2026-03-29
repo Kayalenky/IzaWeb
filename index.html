@@ -57,6 +57,20 @@
           <a href="pages/contact.html" class="btn btn-secondary">Teklif Al</a>
         </div>
       </div>
+
+      <div class="hero-right">
+  <div class="hero-slider">
+    <img src="assets/images/HeaderPhotos/Teknoloji.jpg" class="active">
+    <img src="assets/images/HeaderPhotos/Yenilik.jpg">
+    <img src="assets/images/HeaderPhotos/Guc.jpg">
+  </div>
+
+<div class="hero-badges">
+  <div class="badge badge-1" data-index="0">Teknoloji</div>
+  <div class="badge badge-2" data-index="1">Yenilik</div>
+  <div class="badge badge-3" data-index="2">Güç</div>
+</div>
+</div>
     </section>
 
     <section class="categories" id="kategoriler">
@@ -533,29 +547,50 @@
   <script src="data/products.js"></script>
   <script src="assets/js/main.js"></script>
 
-  <div class="floating-contact-buttons">
-  <a
-    href="tel:05532316365"
-    class="floating-btn floating-call"
-    aria-label="Telefon ile ara"
-    title="Ara"
-  >
-    <svg viewBox="0 0 24 24" aria-hidden="true">
-      <path d="M6.62 10.79a15.05 15.05 0 0 0 6.59 6.59l2.2-2.2a1 1 0 0 1 1.01-.24c1.11.37 2.3.56 3.52.56a1 1 0 0 1 1 1V20a1 1 0 0 1-1 1C10.3 21 3 13.7 3 4a1 1 0 0 1 1-1h3.5a1 1 0 0 1 1 1c0 1.22.19 2.41.56 3.52a1 1 0 0 1-.24 1.01l-2.2 2.26z"></path>
-    </svg>
-    <span>Ara</span>
-  </a>
+<script>
+document.addEventListener("DOMContentLoaded", () => {
 
-  <a
-    href="https://wa.me/905532316365?text=Merhaba%2C%20web%20sitenizden%20ula%C5%9F%C4%B1yorum.%20Bilgi%20almak%20istiyorum."
-    target="_blank"
-    class="floating-btn floating-whatsapp"
-    aria-label="WhatsApp ile iletişim"
-    title="WhatsApp"
-  >
-    <img src="https://cdn-icons-png.flaticon.com/512/733/733585.png" alt="WhatsApp">
-    <span>WhatsApp</span>
-  </a>
-</div>
+const images = document.querySelectorAll(".hero-slider img");
+const badges = document.querySelectorAll(".badge");
+
+let i = 0;
+let interval;
+
+function updateSlider(index) {
+  images.forEach(img => img.classList.remove("active"));
+  badges.forEach(b => b.classList.remove("active"));
+
+  images[index].classList.add("active");
+  badges[index].classList.add("active");
+}
+
+function startSlider() {
+  interval = setInterval(() => {
+    i = (i + 1) % images.length;
+    updateSlider(i);
+  }, 3000);
+}
+
+function stopSlider() {
+  clearInterval(interval);
+}
+
+badges.forEach((badge, index) => {
+  badge.addEventListener("mouseenter", () => {
+    stopSlider();
+    i = index;
+    updateSlider(i);
+  });
+
+  badge.addEventListener("mouseleave", () => {
+    startSlider();
+  });
+});
+
+updateSlider(0);
+startSlider();
+
+});
+</script>
 </body>
 </html>

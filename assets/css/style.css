@@ -1720,3 +1720,68 @@ img {
   box-shadow: 0 10px 24px rgba(11, 22, 53, 0.18);
   transition: opacity 0.2s ease;
 }
+
+/* ================= HERO RIGHT FIX (FULL TEMİZ HALİ) ================= */
+
+.hero-right {
+position: relative;
+width: 500px;   /* sabit yaptık → oval bozulmaz */
+height: 500px;
+overflow: visible; /* badge kesilmez */
+}
+
+/* SLIDER */
+.hero-slider {
+width: 100%;
+height: 100%;
+border-radius: 50%; /* TAM DAİRE */
+overflow: hidden;
+position: relative;
+}
+
+.hero-slider img {
+position: absolute;
+width: 100%;
+height: 100%;
+object-fit: cover;
+object-position: center; /* ortalama fix */
+opacity: 0;
+transition: 0.8s;
+}
+
+.hero-slider img.active {
+opacity: 1;
+}
+
+/* BADGE */
+.hero-badges .badge {
+position: absolute;
+width: 110px;
+height: 110px;
+aspect-ratio: 1 / 1;
+border-radius: 50%;
+
+display: flex;
+align-items: center;
+justify-content: center;
+
+text-align: center;
+font-weight: bold;
+color: white;
+
+background: #6b7280;
+opacity: 0.6;
+transition: 0.3s;
+cursor: pointer;
+}
+
+.badge.active {
+background: var(--accent);
+opacity: 1;
+transform: scale(1.1);
+}
+
+/* POZİSYON FIX (KESİLME YOK) */
+.badge-1 { top: 20px; right: 20px; }
+.badge-2 { bottom: 40px; left: 20px; }
+.badge-3 { bottom: 20px; right: 20px; }
