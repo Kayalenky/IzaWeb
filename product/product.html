@@ -3,190 +3,175 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
   <title>Ürün Detayı | IZA Makina</title>
+
   <link rel="stylesheet" href="../assets/css/style.css" />
 </head>
 <body>
 
-<header class="header">
-  <div class="container">
-    <a href="../index.html" class="logo">
-      <img src="../assets/images/izaLogo.png" alt="IZA Logo">
-    </a>
-
-<nav class="nav">
-  <a href="../index.html">Ana Sayfa</a>
-
-  <div class="nav-dropdown">
-    <a href="../index.html#kategoriler" class="nav-dropdown-toggle">Makinalar</a>
-    <div class="nav-dropdown-menu">
-      <a href="../pages/category.html?category=geri-donusum-hatlari">Geri Dönüşüm Hatları</a>
-      <a href="../pages/category.html?category=parcalayicilar">Parçalayıcılar</a>
-      <a href="../pages/category.html?category=kirma-makineleri">Kırma Makineleri</a>
-      <a href="../pages/category.html?category=metal-geri-donusum-makineleri">Metal Geri Dönüşüm Makineleri</a>
-      <a href="../pages/category.html?category=yikama-ve-kurutma-sistemleri">Yıkama ve Kurutma Sistemleri</a>
-      <a href="../pages/category.html?category=ekstruzyon-sistemleri">Granül Extruder Sistemleri</a>
-      <a href="../pages/category.html?category=elek-degistirici-sistemler">Eriyik Filtre Sistemleri</a>
-      <a href="../pages/category.html?category=balyalama-sistemleri">Balyalama Sistemleri</a>
-      <a href="../pages/category.html?category=tasima-sistemleri">Taşıma Sistemleri</a>
-    </div>
-  </div>
-
-  <a href="../pages/about.html">Hakkımızda</a>
-  <a href="../pages/contact.html">İletişim</a>
-</nav>
-  </div>
-</header>
+<div id="site-header"></div>
 
 <main>
 
-<section class="page-hero">
-  <div class="container">
-    <h1 id="product-page-title">Ürün</h1>
-    <p id="product-page-subtitle"></p>
-  </div>
-</section>
+  <section class="page-hero">
+    <div class="container">
+      <h1 id="product-page-title">Ürün</h1>
+      <p id="product-page-subtitle"></p>
+    </div>
+  </section>
 
-<section class="product-detail-section">
-  <div class="container">
+  <section class="product-detail-section">
+    <div class="container">
 
-    <div class="product-detail-top">
+      <div class="product-detail-top">
 
-      <div class="product-detail-image">
-        <img id="product-image" src="" alt="">
-      </div>
-
-      <div class="product-detail-summary">
-        <span id="product-category" class="section-label"></span>
-        <h2 id="product-name"></h2>
-        <p id="product-short-description"></p>
-
-        <div class="product-detail-actions">
-          <a id="product-category-link" class="btn btn-secondary" href="#">Kategoriye Dön</a>
-          <a href="../pages/contact.html" class="btn btn-primary">Teklif Al</a>
+        <div class="product-detail-image">
+          <img id="product-image" src="" alt="">
         </div>
+
+        <div class="product-detail-summary">
+
+          <span id="product-category" class="section-label"></span>
+
+          <h2 id="product-name"></h2>
+
+          <p id="product-short-description"></p>
+
+          <div class="product-detail-actions">
+
+            <a
+              id="product-category-link"
+              class="btn btn-secondary"
+              href="#"
+            >
+              Kategoriye Dön
+            </a>
+
+            <a
+              href="../pages/contact.html"
+              class="btn btn-primary"
+            >
+              Teklif Al
+            </a>
+
+          </div>
+
+        </div>
+
       </div>
 
     </div>
+  </section>
 
-  </div>
-</section>
+  <section class="product-content-section">
+    <div class="container">
 
-<section class="product-content-section">
-  <div class="container">
+      <div class="product-content-grid">
 
-    <div class="product-content-grid">
+        <div class="product-content-card">
+          <h3>Açıklama</h3>
+          <p id="product-full-description"></p>
+        </div>
 
-      <div class="product-content-card">
-        <h3>Açıklama</h3>
-        <p id="product-full-description"></p>
-      </div>
+        <div
+          class="product-content-card"
+          id="features-card"
+        >
+          <h3>Öne Çıkan Özellikler</h3>
 
-      <div class="product-content-card" id="features-card">
-        <h3>Öne Çıkan Özellikler</h3>
-        <ul id="product-features" class="detail-list"></ul>
-      </div>
+          <ul
+            id="product-features"
+            class="detail-list"
+          ></ul>
+        </div>
 
-      <div class="product-content-card" id="usage-card">
-        <h3>Kullanım Alanları</h3>
-        <ul id="product-usage-areas" class="detail-list"></ul>
-      </div>
+        <div
+          class="product-content-card"
+          id="usage-card"
+        >
+          <h3>Kullanım Alanları</h3>
 
-      <div class="product-content-card" id="specs-card">
-        <h3>Teknik Özellikler</h3>
-        <div id="product-specs" class="specs-list"></div>
+          <ul
+            id="product-usage-areas"
+            class="detail-list"
+          ></ul>
+        </div>
+
+        <div
+          class="product-content-card"
+          id="specs-card"
+        >
+          <h3>Teknik Özellikler</h3>
+
+          <div
+            id="product-specs"
+            class="specs-list"
+          ></div>
+        </div>
+
       </div>
 
     </div>
+  </section>
 
-  </div>
-</section>
+  <!-- ================= TECHNICAL TABLE ================= -->
 
-<section class="products">
-  <div class="container">
-    <h2>Benzer Ürünler</h2>
-    <div id="similar-products-list" class="product-grid"></div>
-  </div>
-</section>
+  <section
+    class="technical-table-section"
+    id="technical-table-section"
+  >
+    <div class="container">
+
+      <div class="section-heading">
+
+        <span class="section-label">
+          Teknik Detaylar
+        </span>
+
+        <h2>Teknik Veriler</h2>
+
+        <p>
+          Ürüne ait teknik kapasite ve model bilgilerini inceleyebilirsiniz.
+        </p>
+
+      </div>
+
+      <div id="technical-table-wrapper"></div>
+
+    </div>
+  </section>
+
+  <!-- ================= SIMILAR PRODUCTS ================= -->
+
+  <section class="products">
+    <div class="container">
+
+      <div class="section-heading">
+
+        <span class="section-label">
+          Diğer Ürünler
+        </span>
+
+        <h2>Benzer Ürünler</h2>
+
+      </div>
+
+      <div
+        id="similar-products-list"
+        class="product-grid"
+      ></div>
+
+    </div>
+  </section>
 
 </main>
 
-<footer class="footer">
-  <div class="container footer-main">
-    <div class="footer-brand">
-      <a href="index.html" class="footer-logo">IZA Makina</a>
-      <p>
-        Geri dönüşüm teknolojileri, endüstriyel makina çözümleri ve projeye özel sistem tasarımlarıyla
-        sürdürülebilir üretime değer katıyoruz.
-      </p>
-    </div>
-
-    <div class="footer-column">
-      <h3>İletişim</h3>
-      <ul class="footer-list">
-        <li><a href="tel:+903646060622">+90 364 606 06 22</a></li>
-        <li><a href="tel:+905325666989">+90 532 566 69 89</a></li>
-        <li><a href="mailto:iza@izamakina.com">iza@izamakina.com</a></li>
-        <li><a href="mailto:export@izamakina.com">export@izamakina.com</a></li>
-      </ul>
-    </div>
-
-    <div class="footer-column">
-      <h3>Adres</h3>
-      <ul class="footer-list footer-address">
-        <li>Pınarçay OSB.</li>
-        <li>28.Cad. No:7/1</li>
-        <li>Çorum Merkez / Çorum</li>
-        <li>Türkiye</li>
-      </ul>
-    </div>
-
-    <div class="footer-column">
-      <h3>Hızlı Linkler</h3>
-      <ul class="footer-list">
-        <li><a href="index.html">Ana Sayfa</a></li>
-        <li><a href="#kategoriler">Makinalar</a></li>
-        <li><a href="pages/about.html">Hakkımızda</a></li>
-        <li><a href="pages/contact.html">İletişim</a></li>
-      </ul>
-    </div>
-  </div>
-
-  <div class="container footer-bottom">
-    <p>© 2026 IZA Recycling Machines. Tüm hakları saklıdır.</p>
-    <div class="footer-bottom-links">
-  <a href="#">Gizlilik Politikası</a>
-  <a href="#">KVKK</a>
-  <a href="#">Çerez Politikası</a>
-</div>
-  </div>
-</footer>
+<div id="site-footer"></div>
 
 <script src="../data/products.js"></script>
 <script src="../assets/js/product.js"></script>
-<div class="floating-contact-buttons">
-  <a
-    href="tel:05532316365"
-    class="floating-btn floating-call"
-    aria-label="Telefon ile ara"
-    title="Ara"
-  >
-    <svg viewBox="0 0 24 24" aria-hidden="true">
-      <path d="M6.62 10.79a15.05 15.05 0 0 0 6.59 6.59l2.2-2.2a1 1 0 0 1 1.01-.24c1.11.37 2.3.56 3.52.56a1 1 0 0 1 1 1V20a1 1 0 0 1-1 1C10.3 21 3 13.7 3 4a1 1 0 0 1 1-1h3.5a1 1 0 0 1 1 1c0 1.22.19 2.41.56 3.52a1 1 0 0 1-.24 1.01l-2.2 2.26z"></path>
-    </svg>
-    <span>Ara</span>
-  </a>
+<script src="../assets/js/layout.js"></script>
 
-  <a
-    href="https://wa.me/905532316365?text=Merhaba%2C%20web%20sitenizden%20ula%C5%9F%C4%B1yorum.%20Bilgi%20almak%20istiyorum."
-    target="_blank"
-    class="floating-btn floating-whatsapp"
-    aria-label="WhatsApp ile iletişim"
-    title="WhatsApp"
-  >
-    <img src="https://cdn-icons-png.flaticon.com/512/733/733585.png" alt="WhatsApp">
-    <span>WhatsApp</span>
-  </a>
-</div>
 </body>
 </html>

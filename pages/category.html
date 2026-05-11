@@ -4,139 +4,70 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Kategori | IZA Makina</title>
-  <meta name="description" content="IZA Makina ürün kategorileri ve makine listesi." />
+
+  <meta
+    name="description"
+    content="IZA Makina ürün kategorileri ve makine listesi."
+  />
+
   <link rel="stylesheet" href="../assets/css/style.css" />
 </head>
 <body>
 
-  <header class="header">
+<div id="site-header"></div>
+
+<main>
+
+  <section class="page-hero">
     <div class="container">
-      <a href="../index.html" class="logo">
-        <img src="../assets/images/izaLogo.png" alt="IZA Recycling Logo" />
-      </a>
 
-<nav class="nav">
-  <a href="../index.html">Ana Sayfa</a>
+      <h1 id="category-title">
+        Kategori
+      </h1>
 
-  <div class="nav-dropdown">
-    <a href="../index.html#kategoriler" class="nav-dropdown-toggle">Makinalar</a>
-    <div class="nav-dropdown-menu">
-      <a href="category.html?category=geri-donusum-hatlari">Geri Dönüşüm Hatları</a>
-      <a href="category.html?category=parcalayicilar">Parçalayıcılar</a>
-      <a href="category.html?category=kirma-makineleri">Kırma Makineleri</a>
-      <a href="category.html?category=metal-geri-donusum-makineleri">Metal Geri Dönüşüm Makineleri</a>
-      <a href="category.html?category=yikama-ve-kurutma-sistemleri">Yıkama ve Kurutma Sistemleri</a>
-      <a href="category.html?category=ekstruzyon-sistemleri">Granül Extruder Sistemleri</a>
-      <a href="category.html?category=elek-degistirici-sistemler">Eriyik Filtre Sistemleri</a>
-      <a href="category.html?category=balyalama-sistemleri">Balyalama Sistemleri</a>
-      <a href="category.html?category=tasima-sistemleri">Taşıma Sistemleri</a>
-    </div>
-  </div>
-
-  <a href="about.html">Hakkımızda</a>
-  <a href="contact.html">İletişim</a>
-</nav>
-    </div>
-  </header>
-
-  <main>
-    <section class="page-hero">
-      <div class="container">
-        <h1 id="category-title">Kategori</h1>
-        <p id="category-description">Bu kategoriye ait makineleri inceleyin.</p>
-      </div>
-    </section>
-
-    <section class="products">
-      <div class="container">
-        <div class="section-heading">
-          <span class="section-label">Makine Listesi</span>
-          <h2 id="category-heading">Kategori Ürünleri</h2>
-          <p id="category-count">Bu kategoriye ait ürünler aşağıda listelenmiştir.</p>
-        </div>
-
-        <div id="category-product-list" class="product-grid"></div>
-      </div>
-    </section>
-  </main>
-
-<footer class="footer">
-  <div class="container footer-main">
-    <div class="footer-brand">
-      <a href="index.html" class="footer-logo">IZA Makina</a>
-      <p>
-        Geri dönüşüm teknolojileri, endüstriyel makina çözümleri ve projeye özel sistem tasarımlarıyla
-        sürdürülebilir üretime değer katıyoruz.
+      <p id="category-description">
+        Bu kategoriye ait makineleri inceleyin.
       </p>
+
+    </div>
+  </section>
+
+  <section class="products">
+
+    <div class="container">
+
+      <div class="section-heading">
+
+        <span class="section-label">
+          Makine Listesi
+        </span>
+
+        <h2 id="category-heading">
+          Kategori Ürünleri
+        </h2>
+
+        <p id="category-count">
+          Bu kategoriye ait ürünler aşağıda listelenmiştir.
+        </p>
+
+      </div>
+
+      <div
+        id="category-product-list"
+        class="product-grid"
+      ></div>
+
     </div>
 
-    <div class="footer-column">
-      <h3>İletişim</h3>
-      <ul class="footer-list">
-        <li><a href="tel:+903646060622">+90 364 606 06 22</a></li>
-        <li><a href="tel:+905325666989">+90 532 566 69 89</a></li>
-        <li><a href="mailto:iza@izamakina.com">iza@izamakina.com</a></li>
-        <li><a href="mailto:export@izamakina.com">export@izamakina.com</a></li>
-      </ul>
-    </div>
+  </section>
 
-    <div class="footer-column">
-      <h3>Adres</h3>
-      <ul class="footer-list footer-address">
-        <li>Pınarçay OSB.</li>
-        <li>28.Cad. No:7/1</li>
-        <li>Çorum Merkez / Çorum</li>
-        <li>Türkiye</li>
-      </ul>
-    </div>
+</main>
 
-    <div class="footer-column">
-      <h3>Hızlı Linkler</h3>
-      <ul class="footer-list">
-        <li><a href="index.html">Ana Sayfa</a></li>
-        <li><a href="#kategoriler">Makinalar</a></li>
-        <li><a href="pages/about.html">Hakkımızda</a></li>
-        <li><a href="pages/contact.html">İletişim</a></li>
-      </ul>
-    </div>
-  </div>
+<div id="site-footer"></div>
 
-  <div class="container footer-bottom">
-    <p>© 2026 IZA Recycling Machines. Tüm hakları saklıdır.</p>
-    <div class="footer-bottom-links">
-  <a href="#">Gizlilik Politikası</a>
-  <a href="#">KVKK</a>
-  <a href="#">Çerez Politikası</a>
-</div>
-  </div>
-</footer>
+<script src="../data/products.js"></script>
+<script src="../assets/js/category.js"></script>
+<script src="../assets/js/layout.js"></script>
 
-  <script src="../data/products.js"></script>
-  <script src="../assets/js/category.js"></script>
-
-  <div class="floating-contact-buttons">
-  <a
-    href="tel:05532316365"
-    class="floating-btn floating-call"
-    aria-label="Telefon ile ara"
-    title="Ara"
-  >
-    <svg viewBox="0 0 24 24" aria-hidden="true">
-      <path d="M6.62 10.79a15.05 15.05 0 0 0 6.59 6.59l2.2-2.2a1 1 0 0 1 1.01-.24c1.11.37 2.3.56 3.52.56a1 1 0 0 1 1 1V20a1 1 0 0 1-1 1C10.3 21 3 13.7 3 4a1 1 0 0 1 1-1h3.5a1 1 0 0 1 1 1c0 1.22.19 2.41.56 3.52a1 1 0 0 1-.24 1.01l-2.2 2.26z"></path>
-    </svg>
-    <span>Ara</span>
-  </a>
-
-  <a
-    href="https://wa.me/905532316365?text=Merhaba%2C%20web%20sitenizden%20ula%C5%9F%C4%B1yorum.%20Bilgi%20almak%20istiyorum."
-    target="_blank"
-    class="floating-btn floating-whatsapp"
-    aria-label="WhatsApp ile iletişim"
-    title="WhatsApp"
-  >
-    <img src="https://cdn-icons-png.flaticon.com/512/733/733585.png" alt="WhatsApp">
-    <span>WhatsApp</span>
-  </a>
-</div>
 </body>
 </html>

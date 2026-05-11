@@ -99,7 +99,55 @@ window.products = [
       "Masterbatch ve kompound üretimi",
       "Mineral dolgulu veya cam elyaf takviyeli ürünler",
       "PE, PP, PET, PVC gibi farklı polimer türleri"
+    ],
+    technicalTableHeaders: [
+  "GE-85",
+  "GE-100",
+  "GE-120",
+  "GE-150"
+],
+
+technicalTable: [
+  {
+    label: "Vida Çapı — mm",
+    values: [
+      "85",
+      "100",
+      "120",
+      "150"
     ]
+  },
+
+  {
+    label: "L/D Oranı",
+    values: [
+      "33:1",
+      "33:1",
+      "33:1",
+      "33:1"
+    ]
+  },
+
+  {
+    label: "Motor Gücü — kW",
+    values: [
+      "55",
+      "90",
+      "132",
+      "200"
+    ]
+  },
+
+  {
+    label: "Kapasite — kg/h",
+    values: [
+      "120-180",
+      "180-300",
+      "300-450",
+      "500-700"
+    ]
+  }
+]
   },
   {
     id: "agromel",
@@ -120,7 +168,50 @@ window.products = [
       "Plastik film ve poşet atıkları",
       "PP / PE rafya ve elyaf",
       "Köpük ve düşük yoğunluklu plastikler"
+    ],
+    technicalTableHeaders: [
+  "AG-600",
+  "AG-800",
+  "AG-1000"
+],
+
+technicalTable: [
+  {
+    label: "Rotor Çapı — mm",
+    values: [
+      "600",
+      "800",
+      "1000"
     ]
+  },
+
+  {
+    label: "Rotor Uzunluğu — mm",
+    values: [
+      "600",
+      "800",
+      "1000"
+    ]
+  },
+
+  {
+    label: "Motor Gücü — kW",
+    values: [
+      "37",
+      "55",
+      "90"
+    ]
+  },
+
+  {
+    label: "Kapasite — kg/h",
+    values: [
+      "300-500",
+      "500-800",
+      "800-1200"
+    ]
+  }
+]
   },
   {
     id: "agromelli-ekstruder",
@@ -143,7 +234,55 @@ window.products = [
       "PP / PE rafya ve elyaf",
       "Nonwoven ve tekstil atıkları",
       "Düşük yoğunluklu plastik hurdalar"
+    ],
+    technicalTableHeaders: [
+  "AGE-85",
+  "AGE-100",
+  "AGE-120",
+  "AGE-150"
+],
+
+technicalTable: [
+  {
+    label: "Vida Çapı — mm",
+    values: [
+      "85",
+      "100",
+      "120",
+      "150"
     ]
+  },
+
+  {
+    label: "L/D Oranı",
+    values: [
+      "33:1",
+      "33:1",
+      "33:1",
+      "33:1"
+    ]
+  },
+
+  {
+    label: "Motor Gücü — kW",
+    values: [
+      "75",
+      "110",
+      "160",
+      "250"
+    ]
+  },
+
+  {
+    label: "Kapasite — kg/h",
+    values: [
+      "180-250",
+      "250-400",
+      "400-600",
+      "600-900"
+    ]
+  }
+]
   },
 
   {
@@ -186,7 +325,53 @@ window.products = [
       "PE/PP film geri dönüşüm",
       "Hafif plastik yoğunlaştırma",
       "Ekstruder öncesi hazırlık"
+    ],
+    technicalTableHeaders: [
+  "YS 250",
+  "YS 300",
+  "YS 350",
+  "YS 380",
+  "YS 400",
+  "YSX 400"
+],
+
+technicalTable: [
+  {
+    label: "Motor Gücü — kW",
+    values: [
+      "45",
+      "55",
+      "75",
+      "90",
+      "110",
+      "132"
     ]
+  },
+
+  {
+    label: "Vida Çapı — mm",
+    values: [
+      "250",
+      "300",
+      "350",
+      "380",
+      "400",
+      "400"
+    ]
+  },
+
+  {
+    label: "Kapasite — kg/s",
+    values: [
+      "200-250",
+      "200-400",
+      "300-500",
+      "350-600",
+      "500-900",
+      "1000-1500"
+    ]
+  }
+]
   },
   {
     id: "yikama-havuzu",
@@ -249,7 +434,56 @@ window.products = [
       "PET temizliği",
       "HDPE/PP yıkama",
       "Ambalaj geri dönüşüm hatları"
+    ],
+
+    technicalTableHeaders: [
+  "TYM-2000",
+  "TYM-2500",
+  "TYM-3000",
+  "TYM-4000"
+],
+
+technicalTable: [
+  {
+    label: "Rotor Boyu — mm",
+    values: [
+      "2000",
+      "2500",
+      "3000",
+      "4000"
     ]
+  },
+
+  {
+    label: "Rotor Çapı — mm",
+    values: [
+      "1000",
+      "1200",
+      "1400",
+      "1600"
+    ]
+  },
+
+  {
+    label: "Motor Gücü — kW",
+    values: [
+      "37-90",
+      "90-110",
+      "110-160",
+      "160-250"
+    ]
+  },
+
+  {
+    label: "Kapasite Film / Çapak — kg",
+    values: [
+      "800/1600",
+      "1600/3000",
+      "2500/4000",
+      "4000/9000"
+    ]
+  }
+]
   },
   {
     id: "turbo-kurutma",
@@ -271,7 +505,56 @@ window.products = [
       "HDPE/PP nem alma",
       "Film kurutma",
       "Granül öncesi kurutma"
+    ],
+
+    technicalTableHeaders: [
+  "TK 2000",
+  "TK 2500",
+  "TK 3000",
+  "TK 4000"
+],
+
+technicalTable: [
+  {
+    label: "Rotor Boyu — mm",
+    values: [
+      "2000",
+      "2500",
+      "3000",
+      "4000"
     ]
+  },
+
+  {
+    label: "Rotor Çapı — mm",
+    values: [
+      "1000",
+      "1200",
+      "1400",
+      "1600"
+    ]
+  },
+
+  {
+    label: "Motor Gücü — kW",
+    values: [
+      "37-90",
+      "90-110",
+      "110-160",
+      "160-250"
+    ]
+  },
+
+  {
+    label: "Kapasite Film / Çapak — kg",
+    values: [
+      "800/1600",
+      "1600/3000",
+      "2500/4000",
+      "4000/9000"
+    ]
+  }
+]
   },
 
   {
@@ -294,7 +577,75 @@ window.products = [
       "Üretim firelerinin ayrıştırılması",
       "Alüminyum ve plastik çekirdek geri kazanımı",
       "Geri dönüşüm tesisleri"
+    ],
+    technicalTableHeaders: [
+  "IZA 500"
+],
+
+technicalTable: [
+  {
+    label: "Makine Boyutları — mm",
+    values: [
+      "1450x1150x1000"
     ]
+  },
+
+  {
+    label: "Malzeme Genişliği — mm",
+    values: [
+      "540"
+    ]
+  },
+
+  {
+    label: "Malzeme Kalınlığı — mm",
+    values: [
+      "2 - 10"
+    ]
+  },
+
+  {
+    label: "Bıçak Ayar Hassasiyeti — mm",
+    values: [
+      "0.02"
+    ]
+  },
+
+  {
+    label: "Silindir Hızı — RPM",
+    values: [
+      "0-50"
+    ]
+  },
+
+  {
+    label: "Motor Gücü — kW",
+    values: [
+      "2.2"
+    ]
+  },
+
+  {
+    label: "Sıcaklık — °C",
+    values: [
+      "0 - 400"
+    ]
+  },
+
+  {
+    label: "Güç Beslemesi",
+    values: [
+      "220-240 V AC, 50-60 Hz"
+    ]
+  },
+
+  {
+    label: "Ağırlık — kg",
+    values: [
+      "495"
+    ]
+  }
+]
   },
   {
     id: "cds-1200",
@@ -316,7 +667,75 @@ window.products = [
       "Klima ve buzdolabı geri dönüşümü",
       "HVAC sistemleri",
       "Metal geri kazanım tesisleri"
+    ],
+    technicalTableHeaders: [
+  "CDS-1200"
+],
+
+technicalTable: [
+  {
+    label: "Makine Boyutları — mm",
+    values: [
+      "1628x1027x1105"
     ]
+  },
+
+  {
+    label: "Malzeme Genişliği — mm",
+    values: [
+      "1200"
+    ]
+  },
+
+  {
+    label: "Malzeme Kalınlığı — mm",
+    values: [
+      "8 - 50"
+    ]
+  },
+
+  {
+    label: "Bıçak Ayar Hassasiyeti — mm",
+    values: [
+      "0.02"
+    ]
+  },
+
+  {
+    label: "Silindir Dönüş Hızı — RPM",
+    values: [
+      "0 - 50"
+    ]
+  },
+
+  {
+    label: "Motor Gücü — kW",
+    values: [
+      "6.2"
+    ]
+  },
+
+  {
+    label: "Kapasite — Kg/h",
+    values: [
+      "125"
+    ]
+  },
+
+  {
+    label: "Giriş Voltajı",
+    values: [
+      "380-460 V AC, 50-60 Hz"
+    ]
+  },
+
+  {
+    label: "Ağırlık — kg",
+    values: [
+      "975"
+    ]
+  }
+]
   },
   {
     id: "cwm-100",
@@ -340,7 +759,54 @@ window.products = [
       "Bakır ve alüminyum geri kazanımı",
       "Endüstriyel atık yönetimi",
       "Elektronik atık işleme tesisleri"
+    ],
+    technicalTableHeaders: [
+  "CWM-100"
+],
+
+technicalTable: [
+  {
+    label: "Makine Boyutları — mm",
+    values: [
+      "1225x700x1250"
     ]
+  },
+
+  {
+    label: "Makine Ağırlığı — kg",
+    values: [
+      "80"
+    ]
+  },
+
+  {
+    label: "Kablo Ölçüleri — mm",
+    values: [
+      "2 - 100"
+    ]
+  },
+
+  {
+    label: "Motor Gücü — kW",
+    values: [
+      "4"
+    ]
+  },
+
+  {
+    label: "Motor Hızı — RPM",
+    values: [
+      "102"
+    ]
+  },
+
+  {
+    label: "Bıçak Malzemesi",
+    values: [
+      "HARDOX 500"
+    ]
+  }
+]
   },
 
   {
@@ -364,7 +830,104 @@ window.products = [
       "Şişe, bidon, boru ve profil atıkları",
       "Granül üretim öncesi hazırlık",
       "Plastik işleme fabrikaları"
+    ],
+    technicalTableHeaders: [
+  "PCM-600",
+  "PCM-800",
+  "PCM-1000",
+  "PCM-1200",
+  "PCM-1500"
+],
+
+technicalTable: [
+  {
+    label: "Boyutlar (AxBxC) — mm",
+    values: [
+      "1200x1400x3100",
+      "1550x830x3700",
+      "1870x2125x4360",
+      "2410x260x5210",
+      "2900x3130x5400"
     ]
+  },
+
+  {
+    label: "Rotor Çapı — mm",
+    values: [
+      "100",
+      "150",
+      "180",
+      "215",
+      "250"
+    ]
+  },
+
+  {
+    label: "Rotor Uzunluğu — mm",
+    values: [
+      "1070",
+      "1630",
+      "1900",
+      "2130",
+      "2440"
+    ]
+  },
+
+  {
+    label: "Rotor Bıçak Sayısı — adet",
+    values: [
+      "15",
+      "15",
+      "9",
+      "9",
+      "9"
+    ]
+  },
+
+  {
+    label: "Sabit Bıçak Sayısı — adet",
+    values: [
+      "4",
+      "4",
+      "6",
+      "6",
+      "6"
+    ]
+  },
+
+  {
+    label: "Kırma Haznesi Ölçüsü — mm",
+    values: [
+      "620x500",
+      "840x650",
+      "1080x790",
+      "1215x967",
+      "1530x1180"
+    ]
+  },
+
+  {
+    label: "Motor Gücü — kW",
+    values: [
+      "25",
+      "37-45",
+      "55-75",
+      "90-110",
+      "130-170"
+    ]
+  },
+
+  {
+    label: "Ağırlık — kg",
+    values: [
+      "4180",
+      "5070",
+      "6100",
+      "7900",
+      "9700"
+    ]
+  }
+]
   },
   {
     id: "iza-ck-700",
@@ -388,7 +951,61 @@ window.products = [
       "Laboratuvarlar",
       "Küçük ölçekli geri dönüşüm tesisleri",
       "Ev tipi kullanım"
+    ],
+    technicalTableHeaders: [
+  "IZA CK 700"
+],
+
+technicalTable: [
+  {
+    label: "Makine Boyutları — mm",
+    values: [
+      "700x765x863"
     ]
+  },
+
+  {
+    label: "Makine Ağırlığı — kg",
+    values: [
+      "172"
+    ]
+  },
+
+  {
+    label: "Motor Gücü — kW",
+    values: [
+      "1,1"
+    ]
+  },
+
+  {
+    label: "Gövde Yapısı",
+    values: [
+      "ST52 / AISI 304"
+    ]
+  },
+
+  {
+    label: "Bıçak / Rotor",
+    values: [
+      "Hardox 500 - 3 pcs"
+    ]
+  },
+
+  {
+    label: "Giriş Ölçüsü — mm",
+    values: [
+      "Ø140"
+    ]
+  },
+
+  {
+    label: "Giriş Voltajı",
+    values: [
+      "220 Volt"
+    ]
+  }
+]
   },
 
   {
@@ -415,7 +1032,138 @@ window.products = [
       "Tekstil",
       "Kauçuk ve otomotiv plastikleri",
       "Karton ve kâğıt türevleri"
+    ],
+
+    technicalTableHeaders: [
+  "RTX-600",
+  "RTX-800",
+  "RTX-1000",
+  "RTX-1200",
+  "RTX-1500"
+],
+
+technicalTable: [
+  {
+    label: "Boyutlar (AxBxC) — mm",
+    values: [
+      "1285x2060x1600",
+      "1650x2350x1920",
+      "2230x2730x2280",
+      "2700x3240x2910",
+      "3210x3645x3280"
     ]
+  },
+
+  {
+    label: "Besleme Haznesi — mm",
+    values: [
+      "576x672",
+      "740x850",
+      "965x1010",
+      "1175x1305",
+      "1360x1550"
+    ]
+  },
+
+  {
+    label: "Rotor Ölçüsü — mm",
+    values: [
+      "Ø250,640",
+      "Ø300,820",
+      "Ø400,1010",
+      "Ø450,1250",
+      "Ø500,1540"
+    ]
+  },
+
+  {
+    label: "Rotor Hızı — rpm",
+    values: [
+      "80-140",
+      "80-140",
+      "80-140",
+      "80-140",
+      "80-140"
+    ]
+  },
+
+  {
+    label: "Rotor Bıçak Sayısı — adet",
+    values: [
+      "64",
+      "64",
+      "100",
+      "100",
+      "130"
+    ]
+  },
+
+  {
+    label: "Rotor Bıçak Ölçüsü — mm",
+    values: [
+      "27x27",
+      "33x33",
+      "38x38",
+      "46x46",
+      "53x53"
+    ]
+  },
+
+  {
+    label: "Sabit Bıçak Sayısı — adet",
+    values: [
+      "2",
+      "2",
+      "4",
+      "4",
+      "6"
+    ]
+  },
+
+  {
+    label: "Motor Gücü — kW",
+    values: [
+      "22-37",
+      "37-45",
+      "55-75",
+      "90-110",
+      "130-150"
+    ]
+  },
+
+  {
+    label: "Elek Delik Ölçüsü — mm",
+    values: [
+      "Custom",
+      "Custom",
+      "Custom",
+      "Custom",
+      "Custom"
+    ]
+  },
+
+  {
+    label: "Ağırlık — kg",
+    values: [
+      "1900",
+      "2650",
+      "4900",
+      "7550",
+      "9800"
+    ]
+  },
+
+  {
+    label: "Hidrolik Motor Gücü — kW",
+    values: [
+      "5.5",
+      "5.5",
+      "11",
+      "11",
+      "15"
+    ]
+  }
+]
   },
   {
     id: "shd-serisi-cift-rotorlu-shredder",
@@ -438,7 +1186,78 @@ window.products = [
       "Belediye ve endüstriyel atıklar",
       "Hafif metal hurdaları",
       "Karton ve kâğıt"
+    ],
+
+    technicalTableHeaders: [
+  "SHD-1000",
+  "SHD-1200"
+],
+
+technicalTable: [
+  {
+    label: "Boyutlar (AxBxC) — mm",
+    values: [
+      "2870x2810x3550",
+      "2895x2940x3615"
     ]
+  },
+
+  {
+    label: "Kırma Haznesi — mm",
+    values: [
+      "1040x800",
+      "1210x935"
+    ]
+  },
+
+  {
+    label: "Rotor Çapı — mm",
+    values: [
+      "Ø195",
+      "Ø295"
+    ]
+  },
+
+  {
+    label: "Rotor Uzunluğu — mm",
+    values: [
+      "2000",
+      "2510"
+    ]
+  },
+
+  {
+    label: "Rotor Hızı — rpm",
+    values: [
+      "10-50",
+      "10-50"
+    ]
+  },
+
+  {
+    label: "Rotor Bıçak Sayısı — adet",
+    values: [
+      "26",
+      "44"
+    ]
+  },
+
+  {
+    label: "Motor Gücü — kW",
+    values: [
+      "2x45",
+      "2x45"
+    ]
+  },
+
+  {
+    label: "Ağırlık — kg",
+    values: [
+      "5350",
+      "6600"
+    ]
+  }
+]
   },
 
   {

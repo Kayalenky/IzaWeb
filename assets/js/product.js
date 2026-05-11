@@ -24,11 +24,20 @@ function createSimilarProductCard(product) {
   return `
     <article class="product-card">
       <img src="../${product.image}" alt="${product.name}" loading="lazy" />
+
       <div class="product-card-content">
         <h3>${product.name}</h3>
-        <p><strong>Kategori:</strong> ${product.category}</p>
+
+        <p>
+          <strong>Kategori:</strong>
+          ${product.category}
+        </p>
+
         <p>${product.shortDescription || ""}</p>
-        <a class="product-link" href="product.html?id=${product.id}">Detayları İncele</a>
+
+        <a class="product-link" href="product.html?id=${product.id}">
+          Detayları İncele
+        </a>
       </div>
     </article>
   `;
@@ -36,10 +45,72 @@ function createSimilarProductCard(product) {
 
 function hideElementIfEmpty(element, hasContent) {
   if (!element) return;
+
   if (!hasContent) {
     element.style.display = "none";
   }
 }
+
+/* ================= TECHNICAL TABLE ================= */
+
+function renderTechnicalTable(product) {
+  const wrapper = document.getElementById("technical-table-wrapper");
+
+  if (!wrapper) return;
+
+  if (!product.technicalTable || !product.technicalTable.length) {
+    wrapper.innerHTML = "";
+    return;
+  }
+
+  const headers = product.technicalTableHeaders || [];
+
+  wrapper.innerHTML = `
+    <div class="technical-table-container">
+
+      <table class="technical-table">
+
+        <thead>
+          <tr>
+            <th>Teknik Veriler</th>
+
+            ${headers
+              .map(header => `<th>${header}</th>`)
+              .join("")}
+          </tr>
+        </thead>
+
+        <tbody>
+
+          ${product.technicalTable
+            .map(
+              row => `
+                <tr>
+
+                  <td>${row.label}</td>
+
+                  ${row.values
+                    .map(
+                      value => `
+                        <td>${value}</td>
+                      `
+                    )
+                    .join("")}
+
+                </tr>
+              `
+            )
+            .join("")}
+
+        </tbody>
+
+      </table>
+
+    </div>
+  `;
+}
+
+/* ================= MAIN RENDER ================= */
 
 function renderProductPage() {
   const productId = getProductIdFromUrl();
@@ -50,15 +121,21 @@ function renderProductPage() {
 
   const pageTitle = document.getElementById("product-page-title");
   const pageSubtitle = document.getElementById("product-page-subtitle");
+
   const productImage = document.getElementById("product-image");
+
   const productCategory = document.getElementById("product-category");
   const productName = document.getElementById("product-name");
+
   const productShortDescription = document.getElementById("product-short-description");
   const productFullDescription = document.getElementById("product-full-description");
+
   const productFeatures = document.getElementById("product-features");
   const productUsageAreas = document.getElementById("product-usage-areas");
   const productSpecs = document.getElementById("product-specs");
+
   const categoryLink = document.getElementById("product-category-link");
+
   const similarProductsList = document.getElementById("similar-products-list");
 
   const featuresCard = document.getElementById("features-card");
@@ -70,7 +147,10 @@ function renderProductPage() {
     return;
   }
 
+  /* ================= PAGE INFO ================= */
+
   document.title = `${product.name} | IZA Makina`;
+
   pageTitle.textContent = product.name;
   pageSubtitle.textContent = product.shortDescription || "";
 
@@ -79,32 +159,61 @@ function renderProductPage() {
 
   productCategory.textContent = product.category;
   productName.textContent = product.name;
-  productShortDescription.textContent = product.shortDescription || "";
-  productFullDescription.textContent = product.fullDescription || "";
 
-  categoryLink.href = `../pages/category.html?category=${product.categorySlug}`;
-  categoryLink.textContent = `${product.category} Kategorisine Dön`;
+  productShortDescription.textContent =
+    product.shortDescription || "";
+
+  productFullDescription.textContent =
+    product.fullDescription || "";
+
+  categoryLink.href =
+    `../pages/category.html?category=${product.categorySlug}`;
+
+  categoryLink.textContent =
+    `${product.category} Kategorisine Dön`;
+
+  /* ================= PRODUCT DATA ================= */
 
   const featureItems = product.features || [];
   const usageItems = product.usageAreas || [];
   const specsObject = product.specs || {};
 
   if (featureItems.length) {
-    productFeatures.innerHTML = createListItems(featureItems);
+    productFeatures.innerHTML =
+      createListItems(featureItems);
   }
+
   if (usageItems.length) {
-    productUsageAreas.innerHTML = createListItems(usageItems);
+    productUsageAreas.innerHTML =
+      createListItems(usageItems);
   }
+
   if (Object.keys(specsObject).length) {
-    productSpecs.innerHTML = createSpecs(specsObject);
+    productSpecs.innerHTML =
+      createSpecs(specsObject);
   }
 
   hideElementIfEmpty(featuresCard, featureItems.length);
+
   hideElementIfEmpty(usageCard, usageItems.length);
-  hideElementIfEmpty(specsCard, Object.keys(specsObject).length);
+
+  hideElementIfEmpty(
+    specsCard,
+    Object.keys(specsObject).length
+  );
+
+  /* ================= TECHNICAL TABLE ================= */
+
+  renderTechnicalTable(product);
+
+  /* ================= SIMILAR PRODUCTS ================= */
 
   const similarProducts = window.products
-    .filter(item => item.categorySlug === product.categorySlug && item.id !== product.id)
+    .filter(
+      item =>
+        item.categorySlug === product.categorySlug &&
+        item.id !== product.id
+    )
     .slice(0, 3);
 
   similarProductsList.innerHTML = similarProducts
@@ -112,4 +221,7 @@ function renderProductPage() {
     .join("");
 }
 
-document.addEventListener("DOMContentLoaded", renderProductPage);
+document.addEventListener(
+  "DOMContentLoaded",
+  renderProductPage
+);
