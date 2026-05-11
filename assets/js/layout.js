@@ -1,135 +1,130 @@
 document.addEventListener("DOMContentLoaded", () => {
+  const BASE = "/IzaWeb";
+
   const productIds = {
     "LDPE Geri Dönüşüm ve Yıkama Hattı": "ldpe-geri-donusum-hatti",
     "HDPE Geri Dönüşüm ve Yıkama Hattı": "hdpe-geri-donusum-hatti",
     "Atık Lastik Geri Dönüşüm Hattı": "atik-lastik-geri-donusum-hatti",
     "Buzdolabı Geri Dönüşüm Hattı": "buzdolabi-geri-donusum-hatti",
     "PET Geri Dönüşüm Hattı": "pet-geri-donusum-hatti",
-
     "Tek Rotorlu Shredder (RTX Serisi)": "rtx-serisi-tek-rotorlu-shredder",
     "Çift Rotorlu Shredder (SHD Serisi)": "shd-serisi-cift-rotorlu-shredder",
-
     "Plastik Kırma Makinesi (PCM Serisi)": "pcm-serisi-plastik-kirma",
     "Cam Kırma Makinesi (İZA CK-700)": "iza-ck-700",
-
     "Alüminyum Kompozit Panel Soyma Makinesi (İZA 500)": "iza-500",
     "Kondenser Geri Dönüşüm Makinesi (CDS-1200)": "cds-1200",
     "Kablo Soyma Makinesi (CWM-100)": "cwm-100",
-
     "Dikey Sıkma": "dikey-sikma",
     "Yatay Sıkma": "yatay-sikma",
     "Yıkama Havuzu": "yikama-havuzu",
     "Friksiyon Yıkama": "friksiyon-yikama",
     "Turbo Yıkama": "turbo-yikama",
     "Turbo Kurutma": "turbo-kurutma",
-
     "Granül Extruder (Yandan Beslemeli)": "yandan-beslemeli-ekstruder",
     "Agromel": "agromel",
     "Agromelli Extrüder": "agromelli-ekstruder",
-
     "Tek Plakalı Elek Değiştirici": "tek-plakali-elek-degistirici",
     "Balya Pres Makinesi": "baler-hp-serisi",
-
     "Konveyor Bant": "konveyor-bantlar",
     "Helezon Konveyor": "helezon-konveyorler",
     "Pnömatik Taşıma Sistemi (Fan + Siklon)": "pnomatik-tasima-sistemleri"
   };
 
+  const productUrl = (name) => {
+    const id = productIds[name];
+    return id ? `${BASE}/product/product.html?id=${id}` : `${BASE}/product/product.html`;
+  };
+
+  const img = (path) => `${BASE}${path}`;
+
   const machineCategories = [
     {
       title: "Geri Dönüşüm Hatları",
-      url: "/pages/category.html?category=geri-donusum-hatlari",
+      url: `${BASE}/pages/category.html?category=geri-donusum-hatlari`,
       products: [
-        { name: "LDPE Geri Dönüşüm ve Yıkama Hattı", image: "/assets/images/Makineler/GeriDonusumHatlari/LDPEGeriDonusumHatti.webp" },
-        { name: "HDPE Geri Dönüşüm ve Yıkama Hattı", image: "/assets/images/Makineler/GeriDonusumHatlari/HDPEGeriDonusumHatti.webp" },
-        { name: "Atık Lastik Geri Dönüşüm Hattı", image: "/assets/images/Makineler/GeriDonusumHatlari/lastikgeridonusumhatti.webp" },
-        { name: "Buzdolabı Geri Dönüşüm Hattı", image: "/assets/images/Makineler/GeriDonusumHatlari/BuzDolabiGeriDonusumHatti.webp" },
-        { name: "PET Geri Dönüşüm Hattı", image: "/assets/images/Makineler/GeriDonusumHatlari/PETGeriDonusumHatti.webp" }
+        { name: "LDPE Geri Dönüşüm ve Yıkama Hattı", image: img("/assets/images/Makineler/GeriDonusumHatlari/LDPEGeriDonusumHatti.webp") },
+        { name: "HDPE Geri Dönüşüm ve Yıkama Hattı", image: img("/assets/images/Makineler/GeriDonusumHatlari/HDPEGeriDonusumHatti.webp") },
+        { name: "Atık Lastik Geri Dönüşüm Hattı", image: img("/assets/images/Makineler/GeriDonusumHatlari/lastikgeridonusumhatti.webp") },
+        { name: "Buzdolabı Geri Dönüşüm Hattı", image: img("/assets/images/Makineler/GeriDonusumHatlari/BuzDolabiGeriDonusumHatti.webp") },
+        { name: "PET Geri Dönüşüm Hattı", image: img("/assets/images/Makineler/GeriDonusumHatlari/PETGeriDonusumHatti.webp") }
       ]
     },
     {
       title: "Shredder (Parçalayıcı)",
-      url: "/pages/category.html?category=parcalayicilar",
+      url: `${BASE}/pages/category.html?category=parcalayicilar`,
       products: [
-        { name: "Tek Rotorlu Shredder (RTX Serisi)", image: "/assets/images/Makineler/Shredder/RTXSerisiTekRotorluShredder/RTXSerisiTekRotorluShredder.webp" },
-        { name: "Çift Rotorlu Shredder (SHD Serisi)", image: "/assets/images/Makineler/Shredder/SHDSerisiCiftRotorluShredder/SHDSerisiCiftRotorluShredder.webp" }
+        { name: "Tek Rotorlu Shredder (RTX Serisi)", image: img("/assets/images/Makineler/Shredder/RTXSerisiTekRotorluShredder/RTXSerisiTekRotorluShredder.webp") },
+        { name: "Çift Rotorlu Shredder (SHD Serisi)", image: img("/assets/images/Makineler/Shredder/SHDSerisiCiftRotorluShredder/SHDSerisiCiftRotorluShredder.webp") }
       ]
     },
     {
       title: "Kırma Makineleri",
-      url: "/pages/category.html?category=kirma-makineleri",
+      url: `${BASE}/pages/category.html?category=kirma-makineleri`,
       products: [
-        { name: "Plastik Kırma Makinesi (PCM Serisi)", image: "/assets/images/Makineler/KirmaMakineleri/PCMSerisiPlastikKirmaMakinesi/PCMSerisiPlastikKirmaMakinesi.webp" },
-        { name: "Cam Kırma Makinesi (İZA CK-700)", image: "/assets/images/Makineler/KirmaMakineleri/IZACK700/IZACK700.webp" }
+        { name: "Plastik Kırma Makinesi (PCM Serisi)", image: img("/assets/images/Makineler/KirmaMakineleri/PCMSerisiPlastikKirmaMakinesi/PCMSerisiPlastikKirmaMakinesi.webp") },
+        { name: "Cam Kırma Makinesi (İZA CK-700)", image: img("/assets/images/Makineler/KirmaMakineleri/IZACK700/IZACK700.webp") }
       ]
     },
     {
       title: "Metal Geri Dönüşüm Makineleri",
-      url: "/pages/category.html?category=metal-geri-donusum-makineleri",
+      url: `${BASE}/pages/category.html?category=metal-geri-donusum-makineleri`,
       products: [
-        { name: "Alüminyum Kompozit Panel Soyma Makinesi (İZA 500)", image: "/assets/images/Makineler/MetalGeriDonusumMakineleri/IZA500AluminyumKompozitPanelSoymaMakinesi/IZA500AluminyumKompozitPanelSoymaMakinesi.webp" },
-        { name: "Kondenser Geri Dönüşüm Makinesi (CDS-1200)", image: "/assets/images/Makineler/MetalGeriDonusumMakineleri/CDS1200/CDS1200.webp" },
-        { name: "Kablo Soyma Makinesi (CWM-100)", image: "/assets/images/Makineler/MetalGeriDonusumMakineleri/CWM100/CWM100.webp" }
+        { name: "Alüminyum Kompozit Panel Soyma Makinesi (İZA 500)", image: img("/assets/images/Makineler/MetalGeriDonusumMakineleri/IZA500AluminyumKompozitPanelSoymaMakinesi/IZA500AluminyumKompozitPanelSoymaMakinesi.webp") },
+        { name: "Kondenser Geri Dönüşüm Makinesi (CDS-1200)", image: img("/assets/images/Makineler/MetalGeriDonusumMakineleri/CDS1200/CDS1200.webp") },
+        { name: "Kablo Soyma Makinesi (CWM-100)", image: img("/assets/images/Makineler/MetalGeriDonusumMakineleri/CWM100/CWM100.webp") }
       ]
     },
     {
       title: "Yıkama ve Kurutma Sistemleri",
-      url: "/pages/category.html?category=yikama-ve-kurutma-sistemleri",
+      url: `${BASE}/pages/category.html?category=yikama-ve-kurutma-sistemleri`,
       products: [
-        { name: "Dikey Sıkma", image: "/assets/images/Makineler/YikamaveKurutmaSistemleri/dikeysikma/dikeysikma.png" },
-        { name: "Yatay Sıkma", image: "/assets/images/Makineler/YikamaveKurutmaSistemleri/yataysikma/yataysikma.webp" },
-        { name: "Yıkama Havuzu", image: "/assets/images/Makineler/YikamaveKurutmaSistemleri/yikamahavuzu/yikamahavuzu.webp" },
-        { name: "Friksiyon Yıkama", image: "/assets/images/Makineler/YikamaveKurutmaSistemleri/FriksiyonYikama/FriksiyonYikama.webp" },
-        { name: "Turbo Yıkama", image: "/assets/images/Makineler/YikamaveKurutmaSistemleri/turboyikama/turboyikama.webp" },
-        { name: "Turbo Kurutma", image: "/assets/images/Makineler/YikamaveKurutmaSistemleri/turbokurutma/turbokurutma.webp" }
+        { name: "Dikey Sıkma", image: img("/assets/images/Makineler/YikamaveKurutmaSistemleri/dikeysikma/dikeysikma.png") },
+        { name: "Yatay Sıkma", image: img("/assets/images/Makineler/YikamaveKurutmaSistemleri/yataysikma/yataysikma.webp") },
+        { name: "Yıkama Havuzu", image: img("/assets/images/Makineler/YikamaveKurutmaSistemleri/yikamahavuzu/yikamahavuzu.webp") },
+        { name: "Friksiyon Yıkama", image: img("/assets/images/Makineler/YikamaveKurutmaSistemleri/FriksiyonYikama/FriksiyonYikama.webp") },
+        { name: "Turbo Yıkama", image: img("/assets/images/Makineler/YikamaveKurutmaSistemleri/turboyikama/turboyikama.webp") },
+        { name: "Turbo Kurutma", image: img("/assets/images/Makineler/YikamaveKurutmaSistemleri/turbokurutma/turbokurutma.webp") }
       ]
     },
     {
       title: "Granül Extruder Sistemleri",
-      url: "/pages/category.html?category=ekstruzyon-sistemleri",
+      url: `${BASE}/pages/category.html?category=ekstruzyon-sistemleri`,
       products: [
-        { name: "Granül Extruder (Yandan Beslemeli)", image: "/assets/images/Makineler/GranulExtruderSistemleri/yandanbeslemeliekstruder/yandanbeslemeliekstruder.webp" },
-        { name: "Agromel", image: "/assets/images/Makineler/GranulExtruderSistemleri/Agromel/Agromel.webp" },
-        { name: "Agromelli Extrüder", image: "/assets/images/Makineler/GranulExtruderSistemleri/AgromelEx/AgromelEx.webp" }
+        { name: "Granül Extruder (Yandan Beslemeli)", image: img("/assets/images/Makineler/GranulExtruderSistemleri/yandanbeslemeliekstruder/yandanbeslemeliekstruder.webp") },
+        { name: "Agromel", image: img("/assets/images/Makineler/GranulExtruderSistemleri/Agromel/Agromel.webp") },
+        { name: "Agromelli Extrüder", image: img("/assets/images/Makineler/GranulExtruderSistemleri/AgromelEx/AgromelEx.webp") }
       ]
     },
     {
       title: "Eriyik Filtreleri",
-      url: "/pages/category.html?category=elek-degistirici-sistemler",
+      url: `${BASE}/pages/category.html?category=elek-degistirici-sistemler`,
       products: [
-        { name: "Tek Plakalı Elek Değiştirici", image: "/assets/images/Makineler/EriyikFiltreleri/TekPlakaliElekDegistirici/TekPlakaliElekDegistirici.webp" }
+        { name: "Tek Plakalı Elek Değiştirici", image: img("/assets/images/Makineler/EriyikFiltreleri/TekPlakaliElekDegistirici/TekPlakaliElekDegistirici.webp") }
       ]
     },
     {
       title: "Geri Dönüşüm Balyalama Sistemleri",
-      url: "/pages/category.html?category=balyalama-sistemleri",
+      url: `${BASE}/pages/category.html?category=balyalama-sistemleri`,
       products: [
-        { name: "Balya Pres Makinesi", image: "/assets/images/Makineler/Balyalama/IZAHPSerisiHidrolikPres/IZAHPSerisiHidrolikPres.webp" }
+        { name: "Balya Pres Makinesi", image: img("/assets/images/Makineler/Balyalama/IZAHPSerisiHidrolikPres/IZAHPSerisiHidrolikPres.webp") }
       ]
     },
     {
       title: "Taşıma Sistemleri",
-      url: "/pages/category.html?category=tasima-sistemleri",
+      url: `${BASE}/pages/category.html?category=tasima-sistemleri`,
       products: [
-        { name: "Konveyor Bant", image: "/assets/images/Makineler/TasimaSistemleri/KonveyorBantlar/KonveyorBantlar.webp" },
-        { name: "Helezon Konveyor", image: "/assets/images/Makineler/TasimaSistemleri/HelezonKonveyorler/HelezonKonveyorler.webp" },
-        { name: "Pnömatik Taşıma Sistemi (Fan + Siklon)", image: "/assets/images/Makineler/TasimaSistemleri/PnomatikTasimaSistemleri/PnomatikTasimaSistemleri.webp" }
+        { name: "Konveyor Bant", image: img("/assets/images/Makineler/TasimaSistemleri/KonveyorBantlar/KonveyorBantlar.webp") },
+        { name: "Helezon Konveyor", image: img("/assets/images/Makineler/TasimaSistemleri/HelezonKonveyorler/HelezonKonveyorler.webp") },
+        { name: "Pnömatik Taşıma Sistemi (Fan + Siklon)", image: img("/assets/images/Makineler/TasimaSistemleri/PnomatikTasimaSistemleri/PnomatikTasimaSistemleri.webp") }
       ]
     }
   ];
 
-  const productUrl = (name) => {
-    const id = productIds[name];
-    return id ? `/product/product.html?id=${id}` : "/product/product.html";
-  };
-
   const megaMenuHTML = machineCategories.map((category) => `
     <div class="mega-category-item">
       <a href="${category.url}" class="mega-category-link">${category.title}</a>
-
       <div class="mega-product-panel">
         <div class="mega-product-title">${category.title}</div>
-
         <div class="mega-product-grid">
           ${category.products.map((product) => `
             <a href="${productUrl(product.name)}" class="mega-product-card">
@@ -145,15 +140,15 @@ document.addEventListener("DOMContentLoaded", () => {
   const headerHTML = `
 <header class="header">
   <div class="container">
-    <a href="/index.html" class="logo">
-      <img src="/assets/images/izaLogo.png" alt="IZA Recycling Logo">
+    <a href="${BASE}/index.html" class="logo">
+      <img src="${BASE}/assets/images/izaLogo.png" alt="IZA Recycling Logo">
     </a>
 
     <nav class="nav">
-      <a href="/index.html">Ana Sayfa</a>
+      <a href="${BASE}/index.html">Ana Sayfa</a>
 
       <div class="nav-dropdown nav-mega-dropdown">
-        <a href="/index.html#kategoriler" class="nav-dropdown-toggle">Makinalar</a>
+        <a href="${BASE}/index.html#kategoriler" class="nav-dropdown-toggle">Makinalar</a>
 
         <div class="nav-dropdown-menu mega-menu">
           <div class="mega-category-list">
@@ -162,8 +157,8 @@ document.addEventListener("DOMContentLoaded", () => {
         </div>
       </div>
 
-      <a href="/pages/about.html">Hakkımızda</a>
-      <a href="/pages/contact.html">İletişim</a>
+      <a href="${BASE}/pages/about.html">Hakkımızda</a>
+      <a href="${BASE}/pages/contact.html">İletişim</a>
     </nav>
   </div>
 </header>
@@ -173,7 +168,7 @@ document.addEventListener("DOMContentLoaded", () => {
 <footer class="footer">
   <div class="container footer-main">
     <div class="footer-brand">
-      <a href="/index.html" class="footer-logo">IZA Makina</a>
+      <a href="${BASE}/index.html" class="footer-logo">IZA Makina</a>
       <p>
         Geri dönüşüm teknolojileri, endüstriyel makina çözümleri ve projeye özel sistem tasarımlarıyla sürdürülebilir üretime değer katıyoruz.
       </p>
@@ -202,10 +197,10 @@ document.addEventListener("DOMContentLoaded", () => {
     <div class="footer-column">
       <h3>Hızlı Linkler</h3>
       <ul class="footer-list">
-        <li><a href="/index.html">Ana Sayfa</a></li>
-        <li><a href="/index.html#kategoriler">Makinalar</a></li>
-        <li><a href="/pages/about.html">Hakkımızda</a></li>
-        <li><a href="/pages/contact.html">İletişim</a></li>
+        <li><a href="${BASE}/index.html">Ana Sayfa</a></li>
+        <li><a href="${BASE}/index.html#kategoriler">Makinalar</a></li>
+        <li><a href="${BASE}/pages/about.html">Hakkımızda</a></li>
+        <li><a href="${BASE}/pages/contact.html">İletişim</a></li>
       </ul>
     </div>
   </div>
